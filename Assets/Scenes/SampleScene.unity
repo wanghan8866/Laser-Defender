@@ -371,6 +371,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 031b549908ecb934dafac836c41073f7, type: 2}
   - {fileID: 11400000, guid: 1c9cb140e46e9554fbb8c696baacf72c, type: 2}
   timeBetweenWave: 2
+  isLooping: 1
 --- !u!1001 &5929579577883079895
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -384,11 +385,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5929579578754896875, guid: 92a0650ea241ee74bb9c4543e95d83cf, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -0.013
       objectReference: {fileID: 0}
     - target: {fileID: 5929579578754896875, guid: 92a0650ea241ee74bb9c4543e95d83cf, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.842
       objectReference: {fileID: 0}
     - target: {fileID: 5929579578754896875, guid: 92a0650ea241ee74bb9c4543e95d83cf, type: 3}
       propertyPath: m_LocalPosition.z
