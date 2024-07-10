@@ -4,7 +4,12 @@
 #
 
 Assets/Assets Packages/
+Assets/Audio/
+Assets/Fonts/
+Assets/Music/
+Assets/Audio/
 .vscode/
+
 
 /[Ll]ibrary/
 /[Tt]emp/

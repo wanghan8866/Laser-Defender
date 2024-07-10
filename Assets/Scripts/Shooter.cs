@@ -17,6 +17,11 @@ public class Shooter : MonoBehaviour
 
     [HideInInspector] public bool isFiring;
     Coroutine firingCoroutine;
+
+    AudioPlayer audioPlayer;
+    private void Awake() {
+        audioPlayer = FindObjectOfType<AudioPlayer>();
+    }
     
     void Start()
     {
@@ -54,6 +59,9 @@ public class Shooter : MonoBehaviour
 
     IEnumerator FireContinuously(){
         while(isFiring){
+
+            
+
             GameObject laser = Instantiate(projectilePrefab, 
             transform.position, Quaternion.identity);
             Rigidbody2D rb2 = laser.GetComponent<Rigidbody2D>();
@@ -62,6 +70,8 @@ public class Shooter : MonoBehaviour
             }
             
             Destroy(laser, projectileLifetime);
+            
+            audioPlayer.PlayerShootingClip();
 
             yield return new WaitForSeconds(GetRandomFireTime());
         }
