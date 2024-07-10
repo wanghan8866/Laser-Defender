@@ -52,7 +52,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 10
   paddings:
-  - 5
+  - 8
   - 0.5
   - 2
   - 0.5
@@ -209,7 +209,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectilePrefab: {fileID: 5390996007165820366, guid: 5fc705a2b4526484782e36d367a7a488, type: 3}
   projectileSpeed: 10
-  projectileLifetime: 5
+  projectileLifetime: 3
   fireRate: 1
   useAI: 0
   firingRateVariance: 0

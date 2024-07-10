@@ -15,6 +15,7 @@ MonoBehaviour:
   enemies:
   - {fileID: 7407654258655185521, guid: a13e817ed52467f48ac4aafdf52a3f48, type: 3}
   - {fileID: 7407654258655185521, guid: a13e817ed52467f48ac4aafdf52a3f48, type: 3}
+  - {fileID: 7407654258655185521, guid: c979dcc211291674288964c8ed6cd7e7, type: 3}
   pathPrefab: {fileID: 179455773682582151, guid: dad13315ee7aed14db468f644d96f05b, type: 3}
   moveSpeed: 3
   timeBetweenEmenySpawns: 2

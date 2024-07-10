@@ -12,6 +12,32 @@ public class AudioPlayer : MonoBehaviour
     [SerializeField] AudioClip DamageTakingClip;
     [SerializeField] [Range(0f, 1f)] float DamageTakingVolume = 1f;
 
+    static AudioPlayer instance;
+    public AudioPlayer GetInstance(){
+        return instance;
+    }
+
+    private void Awake() {
+        ManageSingleton();
+    }
+
+    void ManageSingleton(){
+        // int instanceCount = FindObjectsOfType(GetType()).Length;
+        // instance = 
+        if(instance != null){
+            instance.GetComponent<AudioSource>().clip = GetComponent<AudioSource>().clip;
+            instance.GetComponent<AudioSource>().Play();
+
+            gameObject.SetActive(false);
+            Destroy(gameObject);
+        }
+        else{
+            instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+
+    }
+
     
     public void PlayerShootingClip(){
 

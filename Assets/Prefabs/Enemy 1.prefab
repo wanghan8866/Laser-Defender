@@ -1,5 +1,57 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1219626311651982842
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1378432712032945104}
+  - component: {fileID: 7923932917636296460}
+  m_Layer: 6
+  m_Name: Gun1
+  m_TagString: Untagged
+  m_Icon: {fileID: -5442936267250999957, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1378432712032945104
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1219626311651982842}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.2, y: 0.25, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 623016380904560262}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7923932917636296460
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1219626311651982842}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3d375f0a2bd09a46b3453d76e447f2b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  projectilePrefab: {fileID: 5390996007165820366, guid: 416514381cd2465468e55d600e1ebee0, type: 3}
+  projectileSpeed: 10
+  projectileLifetime: 2
+  fireRate: 0.6
+  useAI: 1
+  firingRateVariance: 0.1
+  minimumFireTime: 0.1
+  isFiring: 0
 --- !u!1 &3717696779224759317
 GameObject:
   m_ObjectHideFlags: 0
@@ -73,7 +125,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 47cd77104902f184080b480eebfe7e4a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 788cfae07fe10544ca41b7c89595182e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -84,6 +136,58 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &6742775475247279436
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6456063441752534856}
+  - component: {fileID: 3065902373231711374}
+  m_Layer: 6
+  m_Name: Gun2
+  m_TagString: Untagged
+  m_Icon: {fileID: -5442936267250999957, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6456063441752534856
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6742775475247279436}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.2, y: 0.25, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 623016380904560262}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3065902373231711374
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6742775475247279436}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3d375f0a2bd09a46b3453d76e447f2b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  projectilePrefab: {fileID: 5390996007165820366, guid: 416514381cd2465468e55d600e1ebee0, type: 3}
+  projectileSpeed: 10
+  projectileLifetime: 2
+  fireRate: 0.6
+  useAI: 1
+  firingRateVariance: 0.1
+  minimumFireTime: 0.1
+  isFiring: 0
 --- !u!1 &7407654258655185521
 GameObject:
   m_ObjectHideFlags: 0
@@ -100,7 +204,7 @@ GameObject:
   - component: {fileID: -4626130220570016482}
   - component: {fileID: 6655552822989069620}
   m_Layer: 6
-  m_Name: Enemy 0
+  m_Name: Enemy 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -119,6 +223,8 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1970640924870144919}
+  - {fileID: 1378432712032945104}
+  - {fileID: 6456063441752534856}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 1}
@@ -168,9 +274,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.0016463995, y: 0}
+  m_Offset: {x: 0.0008946667, y: -0.043067336}
   serializedVersion: 2
-  m_Radius: 0.42408228
+  m_Radius: 0.3810084
 --- !u!114 &3661230493713752281
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -184,7 +290,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isPlayer: 0
-  health: 50
+  health: 25
   score: 10
   hitEffect: {fileID: 7983375351661474117, guid: 1c130db422c3f7c4db799fdaa127dea7, type: 3}
   applyCameraShake: 0
@@ -203,7 +309,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 959f54b5400a7df498ba24017033bc7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 20
+  damage: 15
 --- !u!114 &6655552822989069620
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -211,15 +317,15 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7407654258655185521}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d3d375f0a2bd09a46b3453d76e447f2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   projectilePrefab: {fileID: 5390996007165820366, guid: 416514381cd2465468e55d600e1ebee0, type: 3}
   projectileSpeed: 10
-  projectileLifetime: 2.5
-  fireRate: 1
+  projectileLifetime: 2
+  fireRate: 0.5
   useAI: 1
   firingRateVariance: 0.5
   minimumFireTime: 0.1
