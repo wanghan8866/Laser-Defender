@@ -614,7 +614,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1137410942}
         m_TargetAssemblyTypeName: LevelManager, Assembly-CSharp
-        m_MethodName: LoadGameOver
+        m_MethodName: QuitGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
