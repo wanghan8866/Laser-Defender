@@ -22,6 +22,7 @@ public class Health : MonoBehaviour
 
     ScoreKeeper scoreKeeper;
     LevelManager levelManager;
+    int maxHealth;
 
     public int GetHealth(){
         return health;
@@ -34,13 +35,20 @@ public class Health : MonoBehaviour
         levelManager = FindObjectOfType<LevelManager>();
     }
 
+    private void Start() {
+        maxHealth = health;
+    }
+
     private void OnTriggerEnter2D(Collider2D other) {
         DamageDealer damageDealer = other.GetComponent<DamageDealer>();
         if(damageDealer != null){
    
             TakeDamage(damageDealer.GetDemage());
-            PlayerHitEffect();
-            ShakeCamera();
+            if(damageDealer.GetHasExplosion()){
+                PlayerHitEffect();
+                ShakeCamera();
+            }
+
             damageDealer.Hit();
         }
     }
@@ -58,7 +66,9 @@ public class Health : MonoBehaviour
     }
 
     void TakeDamage(int damage){
-        health -= damage;
+        // health -= damage;
+   
+        health = Math.Clamp(health - damage, 0, maxHealth);
         if(audioPlayer!=null){
             audioPlayer.PlayerDamageTakingClip();
         }

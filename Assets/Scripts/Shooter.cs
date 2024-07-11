@@ -63,9 +63,10 @@ public class Shooter : MonoBehaviour
             
 
             GameObject laser = Instantiate(projectilePrefab, 
-            transform.position, Quaternion.identity);
+            transform.position, transform.rotation);
             Rigidbody2D rb2 = laser.GetComponent<Rigidbody2D>();
             if(rb2!=null){
+                
                 rb2.velocity = transform.up*projectileSpeed;
             }
             

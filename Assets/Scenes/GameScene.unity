@@ -390,6 +390,53 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 382346866}
   m_CullTransparentMesh: 1
+--- !u!1 &449222808
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 449222810}
+  - component: {fileID: 449222809}
+  m_Layer: 0
+  m_Name: PickupManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &449222809
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 449222808}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b843ad232c22b604b868021aa5a025f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pickups:
+  - {fileID: 3340225765863419510, guid: e7484bec7e91cc9468aa023d4391fa94, type: 3}
+  scoreThreshold: 15
+--- !u!4 &449222810
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 449222808}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.910827, y: 0.29220206, z: -0.07229305}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &512062215
 GameObject:
   m_ObjectHideFlags: 0
@@ -475,7 +522,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 18.3
+  m_fontSize: 18.2
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -672,6 +719,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1016794463}
   - component: {fileID: 1016794464}
+  - component: {fileID: 1016794465}
   m_Layer: 0
   m_Name: EnemySpawner
   m_TagString: Untagged
@@ -709,8 +757,28 @@ MonoBehaviour:
   waveConfigs:
   - {fileID: 11400000, guid: 031b549908ecb934dafac836c41073f7, type: 2}
   - {fileID: 11400000, guid: 1c9cb140e46e9554fbb8c696baacf72c, type: 2}
+  - {fileID: 11400000, guid: fe872c78c850f6a458452ce0273a7171, type: 2}
+  - {fileID: 11400000, guid: 4d7c0703055a95348ba44c0910a8de1d, type: 2}
+  - {fileID: 11400000, guid: 031b549908ecb934dafac836c41073f7, type: 2}
+  - {fileID: 11400000, guid: 3699be0b2ce7f3346b22539f1a6f3419, type: 2}
+  - {fileID: 11400000, guid: c942194ccf4056043a97bff26aacc03c, type: 2}
   timeBetweenWave: 2
   isLooping: 1
+--- !u!114 &1016794465
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1016794462}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94d38bf4492083845a8ab37b151955ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemies:
+  - {fileID: 7407654258655185521, guid: 18175b385ed5afa42aa68d56b6d6bfec, type: 3}
+  scoreThreshold: 150
 --- !u!1 &1057823167
 GameObject:
   m_ObjectHideFlags: 0
@@ -1355,6 +1423,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5354598364120578595, guid: 92a0650ea241ee74bb9c4543e95d83cf, type: 3}
+      propertyPath: health
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 5354598364120578595, guid: 92a0650ea241ee74bb9c4543e95d83cf, type: 3}
       propertyPath: traumaDecay
       value: 0.001

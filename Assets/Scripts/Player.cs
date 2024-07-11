@@ -31,6 +31,16 @@ public class Player : MonoBehaviour
         minBound = mainCamera.ViewportToWorldPoint(new Vector2(0, 0));
         maxBound = mainCamera.ViewportToWorldPoint(new Vector2(1, 1));
     }
+    public float[] GetPadding(){
+        return paddings;
+    }
+
+    public Vector2 GetMinBound(){
+        return minBound;
+    }
+    public Vector2 GetMaxBound(){
+        return maxBound;
+    }
 
     private void Move()
     {
